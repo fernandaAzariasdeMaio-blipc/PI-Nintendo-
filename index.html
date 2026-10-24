@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nintendo Switch — Vitrine Digital | Projeto Integrador</title>
+  <meta name="description" content="Vitrine digital do Nintendo Switch: Projeto Integrador de Multimídia que une modelagem 3D e desenvolvimento web (HTML, CSS, JavaScript).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <div class="nav-wrap">
+    <header class="site-header">
+      <div class="container">
+        <a href="#hero" class="logo">
+          <svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="2" width="7" height="20" rx="3.5" fill="#ff3c54"/>
+            <rect x="14" y="2" width="7" height="20" rx="3.5" fill="#00c3e3"/>
+          </svg>
+          <span class="logo-main">NINTENDO <span class="slash">/</span> SWITCH</span>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#produto">Produto</a>
+          <a href="#jogos">Jogos</a>
+          <a href="#modelagem">Modelagem 3D</a>
+          <a href="#como-funciona">Como Funciona</a>
+          <a href="#processo">Processo</a>
+          <a href="#projeto">Projeto</a>
+        </nav>
+
+        <div class="nav-cta">
+          <button class="nav-toggle" aria-label="Abrir menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+
+    <div class="hero-video-bg">
+      <video id="hero-video" muted playsinline autoplay loop preload="auto">
+        <source src="assets/video/switch-hero.mp4" type="video/mp4">
+      </video>
+      <div class="no-video-msg">
+        <strong>Vídeo da modelagem 3D ainda não adicionado</strong>
+        <span>Coloque o arquivo em assets/video/switch-hero.mp4</span>
+      </div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-slides">
+        <div class="hero-slide">
+          <p class="eyebrow">CONSOLE HÍBRIDO <span class="dot">·</span> PORTÁTIL <span class="dot">·</span> TV</p>
+          <h1 class="title-xl">SINTA O <span class="accent">JOGO</span>.</h1>
+          <p class="subtitle">Console de mesa. Console portátil. Ao mesmo tempo.</p>
+        </div>
+        <div class="hero-slide">
+          <p class="eyebrow">JOY-CON <span class="dot">·</span> REMOVÍVEIS</p>
+          <h1 class="title-xl">ENCAIXE. <span class="outline">SOLTE.</span></h1>
+          <p class="subtitle">Os controles saem com um clique e viram dois joysticks pro multiplayer.</p>
+        </div>
+        <div class="hero-slide">
+          <p class="eyebrow">MODELAGEM 3D <span class="dot">·</span> PROJETO INTEGRADOR</p>
+          <h1 class="title-xl">DO 3D AO <span class="accent-red">CÓDIGO</span>.</h1>
+          <p class="subtitle">Um console modelado em três dimensões, recriado inteiro na web.</p>
+        </div>
+      </div>
+
+      <a href="#produto" class="hero-cta">
+        EXPLORAR O SWITCH
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </a>
+    </div>
+
+    <a href="#como-funciona" class="hero-float-card is-left">
+      <span class="icon-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+      </span>
+      <span class="ft-text">
+        <span class="ft-title">Modo TV</span>
+        <span class="ft-desc">Jogue na tela grande</span>
+      </span>
+    </a>
+
+    <a href="#como-funciona" class="hero-float-card is-right">
+      <span class="icon-box is-red">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="6" x2="14" y2="6"/></svg>
+      </span>
+      <span class="ft-text">
+        <span class="ft-title">Modo Portátil</span>
+        <span class="ft-desc">Leve pra qualquer lugar</span>
+      </span>
+    </a>
+
+    <div class="hero-nav">
+      <span class="hero-counter"><span class="hero-counter-current">01</span> / 03</span>
+      <div class="hero-dots">
+        <button class="hero-dot" type="button" aria-label="Slide 1"></button>
+        <button class="hero-dot" type="button" aria-label="Slide 2"></button>
+        <button class="hero-dot" type="button" aria-label="Slide 3"></button>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span class="arrow">↓</span> role para ver mais
+    </div>
+
+  </section>
+
+  <!-- ===================== OVERVIEW (legenda do projeto) ===================== -->
+  <section class="overview reveal">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-title">
+          <span class="icon-box" style="margin-bottom:0;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M8 10h.01M8 14h.01M12 10h4M12 14h4"/></svg>
+          </span>
+          Nintendo Switch — Vitrine Digital
+        </div>
+        <p class="overview-text">
+          Um Projeto Integrador que une modelagem 3D e desenvolvimento web para apresentar um produto real: o console
+          Nintendo Switch recriado em HTML, CSS e JavaScript, usando como ponto de partida visual a modelagem 3D
+          produzida pelo grupo.
+        </p>
+      </div>
+      <div class="overview-tags">
+        <span>VITRINE DIGITAL</span>
+        <span>01 / SOBRE O PROJETO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHOWCASE SPLIT ===================== -->
+  <section class="showcase-split reveal">
+    <div class="container">
+      <div class="split-grid">
+        <div class="split-visual">
+          <video class="split-video" muted playsinline autoplay loop preload="auto">
+            <source src="assets/video/switch-hero.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="split-text">
+          <p>
+            Esse Projeto Integrador existe pra colocar em prática — e demonstrar — o que o grupo aprendeu ao
+            longo do ano, tanto na <span class="accent-red">modelagem 3D</span> quanto no
+            <span class="accent">desenvolvimento web</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE O PRODUTO ===================== -->
+  <section class="section" id="produto">
+    <div class="container about-grid reveal">
+      <div>
+        <span class="section-number">02 — PRODUTO</span>
+        <h2 class="title-lg">SOBRE O <span class="accent">CONSOLE</span></h2>
+      </div>
+
+      <div>
+        <p class="about-lead">
+          Um console que se transforma: sai da base na sala e vira portátil em segundos, sem perder desempenho.
+        </p>
+        <p class="about-text">
+          Lançado pela Nintendo, o Switch combina os dois mundos do videogame: jogar na TV, no modo mesa ou
+          direto na tela do próprio aparelho. Os controles Joy-Con se encaixam nas laterais e podem ser
+          destacados para jogos multiplayer a qualquer momento.
+        </p>
+
+        <div class="meta-list">
+          <div class="meta-item reveal-item">
+            <span class="label">Tipo</span>
+            <span class="value">Console Híbrido</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Tela</span>
+            <span class="value">6.2" LCD Multi-touch</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Armazenamento</span>
+            <span class="value">32 GB (expansível)</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Bateria</span>
+            <span class="value">Até 6 horas de uso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JOGOS E VANTAGENS ===================== -->
+  <section class="section section-alt" id="jogos">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-number">03 — BIBLIOTECA</span>
+          <h2 class="title-lg">JOGOS E <span class="accent">VANTAGENS</span></h2>
+        </div>
+        <p class="muted">Um catálogo em expansão, com vantagens de quem joga no ecossistema Switch.</p>
+      </div>
+
+      <div class="games-grid">
+        <div class="game-card reveal-item">
+          <div class="g-cover">
+            <img src="assets/img/jogos/mario-kart8.jpg" alt="Capa de Mario Kart 8 Deluxe" loading="lazy">
+          </div>
+          <div class="g-title">Mario Kart 8 Deluxe</div>
+          <div class="g-tag">Corrida</div>
+        </div>
+        <div class="game-card reveal-item">
+          <div class="g-cover">
+            <img src="assets/img/jogos/zelda-totk.jpg" alt="Capa de The Legend of Zelda: Tears of the Kingdom" loading="lazy">
+          </div>
+          <div class="g-title">The Legend of Zelda: Tears of the Kingdom</div>
+          <div class="g-tag">Aventura</div>
+        </div>
+        <div class="game-card reveal-item">
+          <div class="g-cover">
+            <img src="assets/img/jogos/mario-wonder.jpg" alt="Capa de Super Mario Bros. Wonder" loading="lazy">
+          </div>
+          <div class="g-title">Super Mario Bros. Wonder</div>
+          <div class="g-tag">Plataforma</div>
+        </div>
+        <div class="game-card reveal-item">
+          <div class="g-cover">
+            <img src="assets/img/jogos/splatoon3.jpg" alt="Capa de Splatoon 3" loading="lazy">
+          </div>
+          <div class="g-title">Splatoon 3</div>
+          <div class="g-tag">Ação · Multiplayer</div>
+        </div>
+      </div>
+
+      <div class="perk-list">
+        <div class="perk-item reveal-item">
+          <span class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-1a4 4 0 00-3-3.87M9 20H4v-1a4 4 0 013-3.87m5-5.26a3 3 0 100-6 3 3 0 000 6zm7 1a3 3 0 10-2.24-5M6 10a3 3 0 102.24-5"/></svg>
+          </span>
+          <div>
+            <div class="g-title" style="font-size:14px">Jogue com amigos</div>
+            <div class="muted" style="font-size:13px">Multiplayer online pelo Nintendo Switch Online.</div>
+          </div>
+        </div>
+        <div class="perk-item reveal-item">
+          <span class="icon-box is-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+          </span>
+          <div>
+            <div class="g-title" style="font-size:14px">Saves na nuvem</div>
+            <div class="muted" style="font-size:13px">Progresso salvo e protegido, mesmo trocando de console.</div>
+          </div>
+        </div>
+        <div class="perk-item reveal-item">
+          <span class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8V6a2 2 0 00-2-2H5a2 2 0 00-2 2v2m18 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0H3m4 4h2m4 0h6"/></svg>
+          </span>
+          <div>
+            <div class="g-title" style="font-size:14px">Biblioteca em expansão</div>
+            <div class="muted" style="font-size:13px">Novos lançamentos direto na eShop, sem sair de casa.</div>
+          </div>
+        </div>
+        <div class="perk-item reveal-item">
+          <span class="icon-box is-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </span>
+          <div>
+            <div class="g-title" style="font-size:14px">Compatível com amiibo</div>
+            <div class="muted" style="font-size:13px">Desbloqueie conteúdo extra tocando a figura no console.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIA / MODELAGEM 3D ===================== -->
+  <section class="section" id="modelagem">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-number">04 — MODELAGEM 3D</span>
+          <h2 class="title-lg">DETALHES EM <span class="accent">FOCO</span></h2>
+        </div>
+        <p class="muted">Modelo 3D do console, renderizado para este projeto.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-item" data-titulo="Console + Dock" data-desc="Visão geral do Switch encaixado na base de TV.">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44a1 1 0 01-.94 0l-7.9-4.44a1 1 0 01-.53-.88v-9a1 1 0 01.53-.88l7.9-4.44a1 1 0 01.94 0l7.9 4.44a1 1 0 01.53.88v9z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+          </div>
+          <div class="view-btn">Visualizar</div>
+        </div>
+        <div class="gallery-item reveal-item" data-titulo="Joy-Con" data-desc="Detalhe dos controles removíveis, nas cores azul e vermelho.">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="7" height="20" rx="3.5"/><rect x="14" y="2" width="7" height="20" rx="3.5"/></svg>
+          </div>
+          <div class="view-btn">Visualizar</div>
+        </div>
+        <div class="gallery-item reveal-item" data-titulo="Modo Portátil" data-desc="O console em uso fora da base, no modo handheld.">
+          <div class="placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="6" x2="14" y2="6"/></svg>
+          </div>
+          <div class="view-btn">Visualizar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMO FUNCIONA ===================== -->
+  <section class="section" id="como-funciona">
+    <div class="container reveal">
+      <div class="section-head">
+        <div>
+          <span class="section-number">05 — FUNCIONALIDADES</span>
+          <h2 class="title-lg">COMO <span class="accent">FUNCIONA</span></h2>
+        </div>
+        <p class="muted">Três modos de jogo em um único aparelho.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal-item">
+          <span class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="18" x2="12" y2="21"/></svg>
+          </span>
+          <div class="f-title">Modo TV</div>
+          <div class="f-desc">Encaixe o console na base e jogue na tela grande, com até 1080p.</div>
+        </div>
+        <div class="feature-card reveal-item">
+          <span class="icon-box is-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-4a2 2 0 012-2h12a2 2 0 012 2v4"/><path d="M8 11V7a4 4 0 118 0v4"/></svg>
+          </span>
+          <div class="f-title">Modo Mesa</div>
+          <div class="f-desc">Use o suporte integrado e divida os Joy-Con com outro jogador.</div>
+        </div>
+        <div class="feature-card reveal-item">
+          <span class="icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="10" y1="6" x2="14" y2="6"/></svg>
+          </span>
+          <div class="f-title">Modo Portátil</div>
+          <div class="f-desc">Retire o console da base e continue jogando em qualquer lugar.</div>
+        </div>
+        <div class="feature-card reveal-item">
+          <span class="icon-box is-red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg>
+          </span>
+          <div class="f-title">Encaixe Magnético</div>
+          <div class="f-desc">Os Joy-Con se prendem por trilhos e podem ser destacados em um clique.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESSO CRIATIVO ===================== -->
+  <section class="section section-alt" id="processo">
+    <div class="container process-grid reveal">
+      <div class="process-text">
+        <span class="section-number">06 — WORKFLOW</span>
+        <h2 class="title-lg">PROCESSO <span class="accent">CRIATIVO</span></h2>
+        <p class="muted">Da modelagem 3D ao código publicado — etapa por etapa.</p>
+      </div>
+
+      <div class="process-list">
+        <div class="process-step reveal-item">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44a1 1 0 01-.94 0l-7.9-4.44a1 1 0 01-.53-.88v-9a1 1 0 01.53-.88l7.9-4.44a1 1 0 01.94 0l7.9 4.44a1 1 0 01.53.88v9z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg>
+          </div>
+          <div class="step-body">
+            <div class="step-title">01 · Modelagem 3D</div>
+            <div class="step-desc">Construção do console em 3D, com foco em proporção e silhueta.</div>
+          </div>
+        </div>
+        <div class="process-step reveal-item">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="15" height="16" rx="2"/><path d="M17 8.5l4.5-2.5v12L17 15.5"/></svg>
+          </div>
+          <div class="step-body">
+            <div class="step-title">02 · Renderização</div>
+            <div class="step-desc">Geração da animação/vídeo mostrando o console abrindo.</div>
+          </div>
+        </div>
+        <div class="process-step reveal-item">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/></svg>
+          </div>
+          <div class="step-body">
+            <div class="step-title">03 · Desenvolvimento Web</div>
+            <div class="step-desc">Estrutura em HTML semântico, estilo em CSS (Grid/Flexbox) e interatividade em JavaScript.</div>
+          </div>
+        </div>
+        <div class="process-step reveal-item">
+          <div class="step-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.5 5.5L20 9l-4.5 3.5L17 18l-5-3-5 3 1.5-5.5L4 9l5.5-1.5z"/></svg>
+          </div>
+          <div class="step-body">
+            <div class="step-title">04 · Publicação</div>
+            <div class="step-desc">Site publicado na Vercel, com versionamento em Git e GitHub.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="closing reveal">
+    <div class="container">
+      <h2 class="title-xl">
+        JOGUE.<br>
+        EM CASA. <span class="accent">EM QUALQUER LUGAR.</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- ===================== SOBRE O PROJETO (PI) ===================== -->
+  <section class="section" id="projeto">
+    <div class="container about-grid reveal">
+      <div>
+        <span class="section-number">07 — PROJETO INTEGRADOR</span>
+        <h2 class="title-lg">QUEM <span class="accent">FEZ</span></h2>
+      </div>
+
+      <div>
+        <p class="about-text">
+          Projeto desenvolvido para o curso técnico de Multimídia, unindo modelagem 3D e desenvolvimento web em um
+          único trabalho. Todo o conteúdo visto ao longo do curso — HTML, CSS, JavaScript, blender e animação 3D
+          foram aplicados na construção deste site.
+        </p>
+
+        <div class="meta-list">
+          <div class="meta-item reveal-item">
+            <span class="label">Disciplina</span>
+            <span class="value">Multimídia</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Entrega</span>
+            <span class="value">Projeto Integrador (PI)</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Modelagem 3D</span>
+            <span class="value">Produzida pelo grupo</span>
+          </div>
+          <div class="meta-item reveal-item">
+            <span class="label">Site</span>
+            <span class="value">HTML, CSS e JavaScript puro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted"> 2026 Projeto Integrador · Multimídia — Nintendo Switch</p>
+      <div class="footer-links">
+        <a href="#produto">Produto</a>
+        <a href="#jogos">Jogos</a>
+        <a href="#processo">Processo</a>
+        <a href="#projeto">Projeto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
