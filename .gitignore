@@ -1,0 +1,4 @@
+.vercel/
+.deploy-info
+node_modules/
+.DS_Store

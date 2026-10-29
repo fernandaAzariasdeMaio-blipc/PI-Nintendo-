@@ -180,7 +180,6 @@ svg {
   .reveal,
   .reveal-item,
   .hero-video-bg video,
-  .hero-ring,
   .scroll-hint .arrow {
     transition: none !important;
     animation: none !important;
@@ -203,6 +202,7 @@ svg {
 }
 
 .site-header {
+  position: relative;
   width: 100%;
   max-width: 1080px;
   background: var(--nav-bg);
@@ -898,16 +898,6 @@ svg {
   object-fit: cover;
 }
 
-.g-cover-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.g-cover-placeholder .icon-box {
-  margin-bottom: 0;
-}
-
 .game-card .g-title {
   font-size: 12.5px;
   font-weight: 700;
@@ -1182,6 +1172,27 @@ svg {
 @media (max-width: 680px) {
   .nav-links {
     display: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    padding: 16px 24px;
+    background: var(--nav-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  }
+
+  .nav-links.is-open a {
+    width: 100%;
+    padding: 10px 0;
   }
 
   .nav-toggle {

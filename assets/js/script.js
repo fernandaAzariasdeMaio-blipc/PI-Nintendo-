@@ -4,6 +4,81 @@
    createElement/appendChild/removeChild, scroll, getBoundingClientRect
    ========================================================= */
 
+/* =========================================================
+   VÍDEOS — TROQUE SÓ AQUI quando tiver os vídeos de verdade
+   =========================================================
+   Duas formas de funcionar, escolha uma:
+
+   1) MAIS FÁCIL — nem precisa mexer em código:
+      salve o vídeo final com o MESMO NOME do arquivo que já
+      está na pasta (assets/video/switch-hero.mp4), substituindo
+      o antigo. Pronto, não precisa tocar nessas linhas abaixo.
+
+   2) Quer usar outro nome de arquivo, ou um vídeo diferente
+      pra cada seção? Troque o texto entre aspas aqui embaixo:
+      - arquivo local: "assets/video/nome-do-arquivo.mp4"
+        (o arquivo precisa estar dentro da pasta assets/video/)
+      - link direto de vídeo: "https://.../video.mp4"
+
+   NÃO FUNCIONA: link do YouTube, ou link de "compartilhar" do
+   Google Drive/Dropbox — esses são páginas, não o arquivo de
+   vídeo em si. Se o vídeo vier de um desses, baixe o arquivo
+   .mp4 e use a opção 1 (arquivo local) em vez de colar o link.
+   ========================================================= */
+
+const VIDEO_HERO = "assets/video/switch-hero.mp4"; // vídeo de fundo do topo da página
+const VIDEO_SHOWCASE = "assets/video/switch-hero.mp4"; // vídeo em destaque (seção logo abaixo)
+
+function trocarVideo(video, link) {
+  if (!video || !link) return;
+
+  const source = video.querySelector("source");
+  if (!source) return;
+
+  source.src = link;
+  video.load();
+}
+
+trocarVideo(document.querySelector("#hero-video"), VIDEO_HERO);
+trocarVideo(document.querySelector(".split-video"), VIDEO_SHOWCASE);
+
+/* =========================================================
+   RENDERS DA GALERIA — TROQUE SÓ AQUI quando tiver as imagens
+   =========================================================
+   Mesma ideia dos vídeos: escreva entre aspas o caminho do
+   arquivo (ex: "assets/img/galeria/console.jpg", depois de
+   colocar a imagem dentro de assets/img/) ou um link direto de
+   imagem. Deixe "" (vazio) pra manter o ícone de espaço reservado.
+
+   NÃO FUNCIONA: link de "compartilhar" do Google Drive/Fotos —
+   baixe a imagem e use o caminho local.
+   ========================================================= */
+
+const RENDER_CONSOLE_DOCK = ""; // 1º card: Console + Dock
+const RENDER_JOYCON = ""; // 2º card: Joy-Con
+const RENDER_MODO_PORTATIL = ""; // 3º card: Modo Portátil
+
+function trocarImagemGaleria(item, link) {
+  if (!item || !link) return;
+
+  const placeholder = item.querySelector(".placeholder-icon");
+  if (!placeholder) return;
+
+  const img = document.createElement("img");
+  img.src = link;
+  img.alt = item.getAttribute("data-titulo") || "";
+
+  item.insertBefore(img, placeholder);
+  placeholder.style.display = "none";
+}
+
+const itensGaleria = document.querySelectorAll(".gallery-item");
+const rendersGaleria = [RENDER_CONSOLE_DOCK, RENDER_JOYCON, RENDER_MODO_PORTATIL];
+
+itensGaleria.forEach(function (item, i) {
+  trocarImagemGaleria(item, rendersGaleria[i]);
+});
+
 /* ---------- 1. Menu mobile ---------- */
 
 const navToggle = document.querySelector(".nav-toggle");
