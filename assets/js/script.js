@@ -27,7 +27,7 @@
    ========================================================= */
 
 const VIDEO_HERO = "assets/video/switch-hero.mp4"; // vídeo de fundo do topo da página
-const VIDEO_SHOWCASE = "assets/video/switch-hero.mp4"; // vídeo em destaque (seção logo abaixo)
+const VIDEO_SHOWCASE = "assets/video/VIDEO_SHOWCASE.mp4"; // vídeo em destaque (seção logo abaixo)
 
 function trocarVideo(video, link) {
   if (!video || !link) return;
@@ -54,9 +54,9 @@ trocarVideo(document.querySelector(".split-video"), VIDEO_SHOWCASE);
    baixe a imagem e use o caminho local.
    ========================================================= */
 
-const RENDER_CONSOLE_DOCK = ""; // 1º card: Console + Dock
-const RENDER_JOYCON = ""; // 2º card: Joy-Con
-const RENDER_MODO_PORTATIL = ""; // 3º card: Modo Portátil
+const RENDER_CONSOLE_DOCK = "assets/img/icons/CONSOLE_DOCK.png"; // 1º card: Console + Dock
+const RENDER_JOYCON = "assets/img/icons/JOYCON.png"; // 2º card: Joy-Con
+const RENDER_CARREGADOR = "assets/img/icons/CARREGADOR.png"; // 3º card: Modo Portátil
 
 function trocarImagemGaleria(item, link) {
   if (!item || !link) return;
@@ -73,7 +73,7 @@ function trocarImagemGaleria(item, link) {
 }
 
 const itensGaleria = document.querySelectorAll(".gallery-item");
-const rendersGaleria = [RENDER_CONSOLE_DOCK, RENDER_JOYCON, RENDER_MODO_PORTATIL];
+const rendersGaleria = [RENDER_CONSOLE_DOCK, RENDER_JOYCON, RENDER_CARREGADOR];
 
 itensGaleria.forEach(function (item, i) {
   trocarImagemGaleria(item, rendersGaleria[i]);
