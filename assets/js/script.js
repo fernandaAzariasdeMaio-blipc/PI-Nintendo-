@@ -4,7 +4,6 @@
    createElement/appendChild/removeChild, scroll, getBoundingClientRect
    ========================================================= */
 
-<<<<<<< HEAD
 /* =========================================================
    VÍDEOS — TROQUE SÓ AQUI quando tiver os vídeos de verdade
    =========================================================
@@ -80,8 +79,6 @@ itensGaleria.forEach(function (item, i) {
   trocarImagemGaleria(item, rendersGaleria[i]);
 });
 
-=======
->>>>>>> 95bf11801c163c2a4e3704f6d4ff6554bdcd977d
 /* ---------- 1. Menu mobile ---------- */
 
 const navToggle = document.querySelector(".nav-toggle");
